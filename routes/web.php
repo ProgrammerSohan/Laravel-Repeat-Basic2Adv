@@ -17,12 +17,16 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/home', function(){
+    return view('home');
+});
+
 //define routing
 Route::get('about', function(){
     //return "<h1>About Page</h1>";
     return view('about');
 
-});
+})->name('about');
 
 Route::get('contact',function(){
    // return "<h1>Contact Page</h1>";
@@ -49,6 +53,7 @@ Route::get('contact/{id}', function($id){
 });
 
 //naming routes
+/*
 Route::get('home', function(){
     return "<a href=''>About</a>";
 });
@@ -92,7 +97,7 @@ Route::group(['prefix' => 'customer'], function(){
      Route::get('/', function(){
          return "<h1>Customer List prefix</h1>";
      });
-});
+});*/
 
 //route methods
 /**
