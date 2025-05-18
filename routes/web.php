@@ -30,7 +30,13 @@ Route::get('contact',function(){
 });
 
 Route::get('test', function(){
-    return view('test.index');
+    //return view('test.index');
+    $test = 'this is test index page view data';
+    $test2 = 'this is test 2 data';
+
+    //return view('test.index', ['test'=>$test]);
+    return view('test.index', compact('test','test2'));
+
 });
 
 Route::get('about-sohan', function(){
