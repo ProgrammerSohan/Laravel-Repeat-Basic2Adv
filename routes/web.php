@@ -18,7 +18,41 @@ Route::get('/', function () {
 });
 
 Route::get('/home', function(){
-    return view('home');
+   // return view('home');
+    $blogs = [
+        [
+            'title'=> 'Title One',
+            'body' => 'This is a body text'
+        ],
+        [
+            'title' => 'Title Two',
+            'body'  => 'This is a body text'
+
+        ],
+        [
+            'title' => 'Title Three',
+            'body'  => 'This is a body text'
+
+        ],
+        [
+            'title' => 'Title Four',
+            'body'  => 'This is a body text four'
+
+        ],
+        [
+            'title' => 'Title Five',
+            'body'  => 'This is a body text five'
+
+        ],
+        [
+            'title' => 'Title Six',
+            'body'  => 'This is a body text six'
+
+        ]
+
+    ];
+        return view('home', compact('blogs'));
+
 });
 
 //define routing
