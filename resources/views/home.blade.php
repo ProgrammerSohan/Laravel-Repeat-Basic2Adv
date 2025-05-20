@@ -24,19 +24,44 @@ Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cum pariatur ratione q
         @endforeach
         -->
         <div class="row mt-5">
-            @for($i= 0; $i< count($blogs); $i++)
+           {{--  @for($i= 0; $i< count($blogs); $i++)--}}
+           @foreach ($blogs as $blog)
+                    @if($blog['status']==1)
                 <div class="col-md-4">
                     <div class="card">
                             <div class="card-body">
-                                <h2>{{ $blogs[$i]['title'] }}</h2>
-                                  <p>{{ $blogs[$i]['body'] }}</p>  
+                               {{--  <h2>{{ $blogs[$i]['title'] }}</h2>
+                                  <p>{{ $blogs[$i]['body'] }}</p>   --}}
+                            <h2>{{ $blog['title'] }}</h2>
+                            <p>{{ $blog['body'] }}</p>
+                          <!--   <p>{{ $blog['status'] }}</p> -->
+                             <p>{{ $blog['status'] }}</p>
+
                             </div>
 
                     </div>
 
                 </div>
+                @else
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h2>{{ $blog['title'] }}</h2>
+                            <p>{{ $blog['body'] }}</p>
+                            <div class="btn-sm btn-warning">Pending</div>
 
-            @endfor
+                        </div>
+
+
+                    </div>
+
+                </div>
+
+                @endif
+                @endforeach
+
+           {{--  @endfor --}}
+
 
 
         </div>
