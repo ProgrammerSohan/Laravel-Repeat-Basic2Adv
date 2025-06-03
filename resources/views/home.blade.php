@@ -49,7 +49,35 @@ Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cum pariatur ratione q
 
            {{--  @endfor --}}
 
+           @php
+              // echo 'Hello World';
+              //$data = true;
+             // $i = 2;
+             //$i=1;
+             $i='';
+           @endphp
 
+        {{--   @isset($data)
+               <div class="alert alert-success">Success</div>
+           @endisset  --}}   
+
+           {{--@switch($i)
+               @case(1)
+                    <div class="alert alert-danger">Danger</div>
+                   @break
+                   @case(2)
+                       
+                   <div class="alert alert-success">Success</div>
+                   @break
+           
+               @default
+               <div class="alert alert-warning">Warning</div>
+                   
+           @endswitch--}}
+
+           @empty($i)
+               <div class="alert alert-success">This is empty</div>
+           @endempty     
 
         </div>
 
