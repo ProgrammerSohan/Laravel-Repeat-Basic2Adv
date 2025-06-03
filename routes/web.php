@@ -4,6 +4,7 @@ use App\Http\Controllers\AboutController;
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\HomeControllersingle;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -170,7 +171,8 @@ Route::fallback(function(){
 
 //***s08-fundamental-controller** */
 
-Route::get('/home', [HomeController::class, 'index']);
+//Route::get('/home', [HomeController::class, 'index']);
+Route::get('/home', HomeControllersingle::class);  //single action controller
 
 Route::get('about',[AboutController::class, 'index'])->name('about');
 
