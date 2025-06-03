@@ -1,5 +1,8 @@
 <?php
 
+use App\Http\Controllers\AboutController;
+use App\Http\Controllers\ContactController;
+use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -17,7 +20,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/home', function(){
+/*Route::get('/home', function(){
    // return view('home');
     $blogs = [
         [
@@ -59,19 +62,21 @@ Route::get('/home', function(){
     ];
         return view('home', compact('blogs'));
 
-});
+});*/
 
 //define routing
+/*
 Route::get('about', function(){
     //return "<h1>About Page</h1>";
     return view('about');
 
-})->name('about');
+})->name('about');*/
 
+/*
 Route::get('contact',function(){
    // return "<h1>Contact Page</h1>";
    return view('contact');
-});
+});*/
 
 Route::get('test', function(){
     //return view('test.index');
@@ -88,9 +93,10 @@ Route::get('about-sohan', function(){
 })->name('hello');
 
 //route parameters
+/*
 Route::get('contact/{id}', function($id){
     return $id;
-});
+});*/
 
 //naming routes
 /*
@@ -159,3 +165,30 @@ Route::get('test2', function(){
 Route::fallback(function(){
     return "This page is not Exists!";
 });
+
+
+//***s08-fundamental-controller** */
+
+Route::get('/home', [HomeController::class, 'index']);
+
+Route::get('about',[AboutController::class, 'index'])->name('about');
+
+/*
+Route::get('contact', function(){
+     return view('contact');
+});*/
+Route::get('contact', [ContactController::class, 'index']);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
