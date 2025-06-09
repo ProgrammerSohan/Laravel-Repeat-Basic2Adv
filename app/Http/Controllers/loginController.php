@@ -10,4 +10,14 @@ class loginController extends Controller
 
             return view('login');
         }
+
+        public function handleLogin(Request $request){
+               /* echo $_POST['name'];
+                echo $_POST['email'];
+                echo $_POST['password'];*/
+
+                //dd($request);
+                dd($request->all());
+
+        }
 }
