@@ -5,6 +5,7 @@ use App\Http\Controllers\BlogController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\HomeControllersingle;
+use App\Http\Controllers\loginController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -184,7 +185,7 @@ Route::get('contact', [ContactController::class, 'index']);
 
 Route::resource('blog', BlogController::class);
 
-
+Route::get('/login', [loginController::class, 'index'])->name('login');
 
 
 
