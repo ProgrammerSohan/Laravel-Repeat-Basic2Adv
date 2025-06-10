@@ -43,6 +43,13 @@ class loginController extends Controller
                     'email'=> ['required','email'],
                     'password'=>'required'
 
+               ],[
+                    'name.required' => 'The user name field is required!',
+                    'name.alpha'    => 'User name should only contain letters!',
+                    //'email.email'   => 'Hello this is not a email'
+                    'email.email'   => 'Hello this is not a email',
+                    'name.min'     => 'sdakjflasdkjf'
+
                ]);
 
                return $request;
