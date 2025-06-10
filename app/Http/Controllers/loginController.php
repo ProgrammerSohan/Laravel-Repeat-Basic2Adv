@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\LoginRequest;
 use Illuminate\Http\Request;
 
 class loginController extends Controller
@@ -11,7 +12,7 @@ class loginController extends Controller
             return view('login');
         }
 
-        public function handleLogin(Request $request){
+        public function handleLogin(LoginRequest $request){
                /* echo $_POST['name'];
                 echo $_POST['email'];
                 echo $_POST['password'];*/
@@ -37,7 +38,7 @@ class loginController extends Controller
                ]);
 
                return $request;*/
-
+          /*
                $request->validate([
                     'name'=> ['required','alpha','min:6','max:10'],
                     'email'=> ['required','email'],
@@ -50,7 +51,7 @@ class loginController extends Controller
                     'email.email'   => 'Hello this is not a email',
                     'name.min'     => 'sdakjflasdkjf'
 
-               ]);
+               ]);*/
 
                return $request;
 
