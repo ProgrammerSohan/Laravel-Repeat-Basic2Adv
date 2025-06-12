@@ -54,7 +54,10 @@ class HomeControllersingle extends Controller
         //return DB::table('posts')->get();
         //return DB::table('posts')->find(7);
         //return DB::table('posts')->first();
-        return DB::table('posts')->where('status','=',2)->get();
+       // return DB::table('posts')->where('status','=',2)->get();
+       // return DB::table('posts')->pluck('title','id');
+        return DB::table('posts')->pluck('title');
+
 
         return view('home', compact('blogs'));
     }
