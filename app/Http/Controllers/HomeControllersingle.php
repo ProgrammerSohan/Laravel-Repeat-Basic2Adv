@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class HomeControllersingle extends Controller
 {
@@ -11,7 +12,7 @@ class HomeControllersingle extends Controller
      */
     public function __invoke(Request $request)
     {
-         $blogs = [
+        /* $blogs = [
         [
             'title'=> 'Title One',
             'body' => 'This is a body text',
@@ -48,7 +49,12 @@ class HomeControllersingle extends Controller
 
         ]
 
-    ];
+    ];*/
+
+        //return DB::table('posts')->get();
+        //return DB::table('posts')->find(7);
+        //return DB::table('posts')->first();
+        return DB::table('posts')->where('status','=',2)->get();
 
         return view('home', compact('blogs'));
     }
