@@ -66,8 +66,29 @@ class HomeControllersingle extends Controller
       // return DB::table('posts')->where('status',0)->get();
       //return DB::table('posts')->where('status', 1)->get();
      // return DB::table('posts')->where('status','!=',1)->get();
-     return DB::table('posts')->where('status','=',1)->get();
+     /*return DB::table('posts')->where('status','=',1)->get();
 
-        return view('home', compact('blogs'));
+        return view('home', compact('blogs'));*/
+
+        DB::table('posts')->insert([
+            [
+            'title' => 'This is test data',
+            'description'=>'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Alias, optio ea neque fugit deleniti sequi autem aliquid ex labore cupiditate ducimus esse sunt maiores veniam? Deserunt accusantium explicabo pariatur quibusdam.',
+            'status' => 1,
+            'publish_date' => date('Y-m-d'),
+            'user_id' =>1
+            ],
+            [
+                'title' => 'This is data 2',
+                'description' => 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Alias, optio ea neque fugit deleniti sequi autem aliquid ex labore cupiditate ducimus esse sunt maiores veniam? Deserunt accusantium explicabo pariatur quibusdam.',
+                'status' => 1,
+                'publish_date' => date('Y-m-d'),
+                'user_id'=> 2
+
+            ]
+
+        ]);
+        dd('successfull');
+
     }
 }
