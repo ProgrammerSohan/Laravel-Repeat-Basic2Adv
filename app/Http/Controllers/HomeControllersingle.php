@@ -56,8 +56,17 @@ class HomeControllersingle extends Controller
         //return DB::table('posts')->first();
        // return DB::table('posts')->where('status','=',2)->get();
        // return DB::table('posts')->pluck('title','id');
-        return DB::table('posts')->pluck('title');
-
+      //  return DB::table('posts')->pluck('title');
+      //************************************** */
+      //********Using of where condition***** */
+        //return DB::table('posts')->where('id','=',10)->get();
+        //return DB::table('posts')->where('id',10)->get();
+       // return DB::table('posts')->where('id','>',10)->get();
+       //return DB::table('posts')->where('id','>',10)->where('id','<',20)->get();
+      // return DB::table('posts')->where('status',0)->get();
+      //return DB::table('posts')->where('status', 1)->get();
+     // return DB::table('posts')->where('status','!=',1)->get();
+     return DB::table('posts')->where('status','=',1)->get();
 
         return view('home', compact('blogs'));
     }
