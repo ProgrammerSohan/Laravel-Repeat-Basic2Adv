@@ -92,11 +92,19 @@ class HomeControllersingle extends Controller
         dd('successfull');*/
 
        // return DB::table('posts')->where('id',57)->get();
-       return DB::table('posts')->where('id',57)->update([
+     /*  return DB::table('posts')->where('id',57)->update([
             'title' => 'updated title of 57',
             'description'=> 'this is the updated description of 57'
 
        ]);
+       dd('success');*/
+
+       //delete data from db
+        /*
+       DB::table('posts')->where('id',57)->delete();
+       dd('success');*/
+
+       DB::table('posts')->delete(56);
        dd('success');
 
     }
