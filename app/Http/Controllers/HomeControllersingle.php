@@ -70,6 +70,7 @@ class HomeControllersingle extends Controller
 
         return view('home', compact('blogs'));*/
 
+        /*
         DB::table('posts')->insert([
             [
             'title' => 'This is test data',
@@ -88,7 +89,15 @@ class HomeControllersingle extends Controller
             ]
 
         ]);
-        dd('successfull');
+        dd('successfull');*/
+
+       // return DB::table('posts')->where('id',57)->get();
+       return DB::table('posts')->where('id',57)->update([
+            'title' => 'updated title of 57',
+            'description'=> 'this is the updated description of 57'
+
+       ]);
+       dd('success');
 
     }
 }
