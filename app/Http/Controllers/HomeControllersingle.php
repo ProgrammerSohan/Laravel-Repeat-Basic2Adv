@@ -114,11 +114,18 @@ class HomeControllersingle extends Controller
       ->select('posts.*')
        ->get(); */
 
-      
+      /*
     return DB::table('posts')->join('category','posts.category_id', '=', 'category.id')   
         ->select('category.*')
-        ->get();
+        ->get();*/
       //  return DB::table('category')->get();
 
+      /*******Aggregates******** */
+        return DB::table('posts')->count();
+
+
     }
+ 
+
+
 }

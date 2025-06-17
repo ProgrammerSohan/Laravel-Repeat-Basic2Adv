@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class HomeController extends Controller
 {
@@ -49,4 +50,18 @@ class HomeController extends Controller
         return view('home', compact('blogs'));
 
      }
+
+      public function PostStats()
+    {   
+        $stats = [
+            'total_posts' => DB::table('posts')->count(),
+            'max_id' => DB::table('posts')->max('id'),
+            'min_id' =>DB::table('posts')->min('id'),
+            'sum_user_id'=>DB::table('posts')->sum('user_id'),
+            'avg_user_id'=>DB::table('posts')->avg('user_id'),
+
+        ];
+        return view('posts.stats', compact('stats'));
+
+    }//full aggregate
 }
