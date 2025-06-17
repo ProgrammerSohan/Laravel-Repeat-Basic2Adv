@@ -103,9 +103,22 @@ class HomeControllersingle extends Controller
         /*
        DB::table('posts')->where('id',57)->delete();
        dd('success');*/
-
+/*
        DB::table('posts')->delete(56);
-       dd('success');
+       dd('success');*/
+        
+       //basic join statement
+     //  return DB::table('posts')->join('category','posts.category_id', '=', 'category.id')->get();
+
+    /* return DB::table('posts')->join('category','posts.category_id', '=','category.id')
+      ->select('posts.*')
+       ->get(); */
+
+      
+    return DB::table('posts')->join('category','posts.category_id', '=', 'category.id')   
+        ->select('category.*')
+        ->get();
+      //  return DB::table('category')->get();
 
     }
 }
