@@ -137,7 +137,24 @@ class HomeControllersingle extends Controller
      // return DB::table('posts')->max('views');
 
      /***S12-fundamental-database-eloquent orm */
-        return $posts = MyPost::all();
+       // return $posts = MyPost::all();
+       /*
+        $post = MyPost::find(50);
+        return $post->title;*/
+        
+        //return $post = MyPost::findOrFail(50);
+
+      //  return $post = MyPost::find(50);
+
+      /*
+      $posts = MyPost::all();
+      return $posts;*/
+
+      $posts = MyPost::all();
+      foreach($posts as $post){
+        echo $post->title . "<br>";
+      }
+
 
 
     }
