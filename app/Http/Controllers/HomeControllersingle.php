@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\MyPost;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
@@ -133,7 +134,10 @@ class HomeControllersingle extends Controller
       // return DB::table('posts')->sum('views');
      // return DB::table('posts')->avg('views');
       //  return DB::table('posts')->min('views');
-      return DB::table('posts')->max('views');
+     // return DB::table('posts')->max('views');
+
+     /***S12-fundamental-database-eloquent orm */
+        return $posts = MyPost::all();
 
 
     }
