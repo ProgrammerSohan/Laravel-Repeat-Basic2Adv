@@ -22,6 +22,7 @@ class PostSeeder extends Seeder
                     'publish_date' => date('Y-m-d'),
                     'user_id' => 1,
                     'category_id'=>rand(1,4),
+                    'views'=>rand(100,2000)     
                     ]);
             }
     }

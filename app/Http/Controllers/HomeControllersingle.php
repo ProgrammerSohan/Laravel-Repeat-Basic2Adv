@@ -121,7 +121,19 @@ class HomeControllersingle extends Controller
       //  return DB::table('category')->get();
 
       /*******Aggregates******** */
-        return DB::table('posts')->count();
+      /**
+       * count()
+       * max()
+       * min()
+       * avg()
+       * sum()
+       * */
+       // return DB::table('posts')->count();
+
+      // return DB::table('posts')->sum('views');
+     // return DB::table('posts')->avg('views');
+      //  return DB::table('posts')->min('views');
+      return DB::table('posts')->max('views');
 
 
     }
