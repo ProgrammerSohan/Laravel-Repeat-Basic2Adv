@@ -150,10 +150,17 @@ class HomeControllersingle extends Controller
       $posts = MyPost::all();
       return $posts;*/
 
+      /*
       $posts = MyPost::all();
       foreach($posts as $post){
         echo $post->title . "<br>";
-      }
+      }*/
+
+      //return MyPost::all();
+
+     // return MyPost::where('views', '=', 120)->get();
+     // return MyPost::where('views', '>',100)->where('id', '=', 30)->get();
+      return MyPost::where('views', '>',1500)->orwhere('id', '=', 30)->get();
 
 
 
