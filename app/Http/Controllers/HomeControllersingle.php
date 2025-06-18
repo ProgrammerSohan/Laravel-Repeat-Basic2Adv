@@ -160,9 +160,23 @@ class HomeControllersingle extends Controller
 
      // return MyPost::where('views', '=', 120)->get();
      // return MyPost::where('views', '>',100)->where('id', '=', 30)->get();
-      return MyPost::where('views', '>',1500)->orwhere('id', '=', 30)->get();
+     // return MyPost::where('views', '>',1500)->orwhere('id', '=', 30)->get();
 
+     //inserting or saving data with eloquent
 
+     $post = new MyPost();
+
+     $post->title = 'Post 51,this is the post no 51';
+     $post->description = 'This is the description of post 51';
+     $post->status = 1;
+     $post->publish_date = date('Y-m-d');
+     $post->user_id = 1;
+     $post->category_id = 1;
+     $post->views = 400;
+
+     $post->save();
+
+      dd('success');
 
     }
  
