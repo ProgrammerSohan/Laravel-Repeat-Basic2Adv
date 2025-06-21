@@ -163,7 +163,7 @@ class HomeControllersingle extends Controller
      // return MyPost::where('views', '>',1500)->orwhere('id', '=', 30)->get();
 
      //inserting or saving data with eloquent
-
+/*
      $post = new MyPost();
 
      $post->title = 'Post 51,this is the post no 51';
@@ -175,6 +175,30 @@ class HomeControllersingle extends Controller
      $post->views = 400;
 
      $post->save();
+
+      dd('success');*/
+
+      /**updating data with eloquent */
+      /*
+      $post=MyPost::find(52);
+      //return $post;
+      $post->title = 'Updated Title of 52,This is a new title';
+      $post->save();
+
+      dd('success');*/
+/*
+      $post = MyPost::where('id', 52)->first();
+      $post->title = 'This is a new title of 52';
+      $post->description = 'Updated description of 52';
+      $post->save();
+
+      dd('success');
+*/
+      // $post = MyPost::where('id', 52)->get();
+       $post = MyPost::where('id', 52)->first();
+      $post->title = 'checking2 This is a new title of 52';
+      $post->description = 'checking2 Updated description of 52';
+      $post->save();
 
       dd('success');
 
