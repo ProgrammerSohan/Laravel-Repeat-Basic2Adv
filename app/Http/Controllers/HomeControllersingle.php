@@ -195,12 +195,24 @@ class HomeControllersingle extends Controller
       dd('success');
 */
       // $post = MyPost::where('id', 52)->get();
+      /*
        $post = MyPost::where('id', 52)->first();
       $post->title = 'checking2 This is a new title of 52';
       $post->description = 'checking2 Updated description of 52';
       $post->save();
 
-      dd('success');
+      dd('success');*/
+
+      //deleting data
+      /*
+        MyPost::find(52)->delete();
+         dd('success');*/
+       
+         /*
+       MyPost::findOrFail(51)->delete();
+        dd('success');*/
+        MyPost::where('id',50)->delete();
+        dd('success');
 
     }
  
