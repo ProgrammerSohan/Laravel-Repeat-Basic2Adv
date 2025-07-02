@@ -211,7 +211,39 @@ class HomeControllersingle extends Controller
          /*
        MyPost::findOrFail(51)->delete();
         dd('success');*/
+        /*
         MyPost::where('id',50)->delete();
+        dd('success');*/
+
+        /*
+        $post = MyPost::create([
+           'title' => 'This is from mass assign',
+           'description'=>'This is a description from mass assign',
+           'status' => 1,
+           'publish_date' => date('Y-m-d'),
+           'user_id' => 1,
+           'category_id' => 2,
+           'views' => 555
+
+        ]);
+        dd('success');*/
+
+        /*
+        return $post = MyPost::find(53);
+        dd('success');*/
+
+        /*
+        $post = MyPost::find(53)->update([
+            'title' => 'The date has updated'
+
+        ]);
+        dd('success');*/
+
+        $post = MyPost::where('status', 0)->update([
+           'status' => 1
+
+        ]);
+
         dd('success');
 
     }
