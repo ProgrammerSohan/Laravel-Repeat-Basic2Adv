@@ -252,7 +252,11 @@ class HomeControllersingle extends Controller
 
         dd('succes');*/
 
-        return MyPost::all();
+       // return MyPost::all();
+
+     //  return MyPost::onlyTrashed()->get();
+     // MyPost::find(48)->delete();
+     return MyPost::onlyTrashed()->get();
 
 
     }
