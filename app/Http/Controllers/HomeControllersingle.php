@@ -239,12 +239,21 @@ class HomeControllersingle extends Controller
         ]);
         dd('success');*/
 
+        /*
         $post = MyPost::where('status', 0)->update([
            'status' => 1
 
         ]);
 
-        dd('success');
+        dd('success');*/
+
+        /*
+        MyPost::where('id', 49)->delete();
+
+        dd('succes');*/
+
+        return MyPost::all();
+
 
     }
  
