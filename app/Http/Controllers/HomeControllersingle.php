@@ -256,7 +256,26 @@ class HomeControllersingle extends Controller
 
      //  return MyPost::onlyTrashed()->get();
      // MyPost::find(48)->delete();
-     return MyPost::onlyTrashed()->get();
+     //return MyPost::onlyTrashed()->get();
+
+     //restore a record or deleting a record permanently
+     //return MyPost::all();
+     /*MyPost::withTrashed()->find(48)->restore();
+
+     dd('success');*/
+
+    // return MyPost::all();
+          // MyPost::withTrashed()->find(48)->restore();
+
+     // dd('success');
+            // return MyPost::onlyTrashed()->get();
+
+            /*
+     MyPost::withTrashed()->find(47)->forceDelete();
+      dd('success');*/
+
+      return MyPost::onlyTrashed()->get();
+     
 
 
     }
