@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\User;
 use App\Models\MyPost;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
@@ -274,7 +275,12 @@ class HomeControllersingle extends Controller
      MyPost::withTrashed()->find(47)->forceDelete();
       dd('success');*/
 
-      return MyPost::onlyTrashed()->get();
+     // return MyPost::onlyTrashed()->get();
+
+     $users = User::all();
+
+     //return $users;
+     return view('home',compact('users'));
      
 
 
