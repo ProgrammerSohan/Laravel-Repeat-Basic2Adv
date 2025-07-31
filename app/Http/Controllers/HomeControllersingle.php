@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\User;
 use App\Models\MyPost;
 use App\Models\Address;
+use App\Models\Category;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
@@ -284,9 +285,18 @@ class HomeControllersingle extends Controller
      //return $users;
      return view('home',compact('users'));*/
 
+     /*
      $addresses = Address::all();
 
-     return view('home', compact('addresses'));
+     return view('home', compact('addresses'));*/
+
+    // $categories = Category::all();
+
+    //return $categories = Category::find(1)->posts;
+
+    $categories = Category::find(2)->posts;
+
+     return view('home', compact('categories'));
      
      
     }

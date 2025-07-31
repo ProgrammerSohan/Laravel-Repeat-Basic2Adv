@@ -16,6 +16,7 @@
                     </div>
                 @endforeach--}}
 
+                {{--
                 @foreach ($addresses as $address)
                         <div class="col-md-3">
                             <div class="card">
@@ -29,6 +30,21 @@
                             </div>
 
                         </div>
+                @endforeach --}}
+
+                @foreach ($categories as $category )
+
+                        <div class="col-md-3">
+                            <div class="card">
+                                <h4>{{$category->title}}</h4>
+                                <p>{{$category->description}}</p>
+                               {{-- <p>{{$category->name}}</p>--}}
+                               <p class="btn-sm btn-success">{{$category->category->name}}</p>
+
+                            </div>
+
+                        </div>
+                    
                 @endforeach
 
     </div>
