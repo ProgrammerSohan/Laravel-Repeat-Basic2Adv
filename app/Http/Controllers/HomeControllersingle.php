@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\User;
 use App\Models\MyPost;
+use App\Models\Address;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
@@ -277,13 +278,17 @@ class HomeControllersingle extends Controller
 
      // return MyPost::onlyTrashed()->get();
 
+     /*
      $users = User::all();
 
      //return $users;
-     return view('home',compact('users'));
+     return view('home',compact('users'));*/
+
+     $addresses = Address::all();
+
+     return view('home', compact('addresses'));
      
-
-
+     
     }
  
 
