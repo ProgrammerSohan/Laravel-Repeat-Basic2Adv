@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Tag;
+use App\Models\Post;
 use App\Models\User;
 use App\Models\MyPost;
 use App\Models\Address;
@@ -294,9 +296,31 @@ class HomeControllersingle extends Controller
 
     //return $categories = Category::find(1)->posts;
 
-    $categories = Category::find(2)->posts;
+//post - may have many tags
+//tag - may have many posts
 
-     return view('home', compact('categories'));
+//pivot table
+
+
+   // $categories = Category::find(2)->posts;
+   // $categories = Category::find(3)->posts;
+
+   //  return view('home', compact('categories'));
+
+      //$post = Post::first();
+     // $post = Post::with('tags')->first();
+     // $tag = Tag::first();
+      //$post->tags()->attach(2,3,4);
+
+     // $post->tags()->attach($tag);
+
+     //return $post;
+
+     $posts = Post::with('tags')->get();
+
+     $tag = Tag::first();
+
+     return view('home', compact('posts'));
      
      
     }
