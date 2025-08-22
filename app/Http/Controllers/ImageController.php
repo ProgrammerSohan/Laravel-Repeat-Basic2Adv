@@ -46,4 +46,10 @@ class ImageController extends Controller
 
 
      }
+
+     public function download()
+     {
+         return response()->download(public_path('/storage/images/new_image.jpg'));
+
+     }
 }

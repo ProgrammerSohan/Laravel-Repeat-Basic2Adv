@@ -199,6 +199,6 @@ Route::get('/success', function(){
 
 })->name('success');
 
-
+Route::get('/download',[ImageController::class, 'download'])->name('download');
 
 

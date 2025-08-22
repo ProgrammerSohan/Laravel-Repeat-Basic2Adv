@@ -5,7 +5,7 @@
 
        
 
-        <img src="{{asset('/storage/images/new_image.jpg')}}" alt="">
+        {{--<img src="{{asset('/storage/images/new_image.jpg')}}" alt="">--}}
         <div class="col-md-4 mt-5">
                 @if ($errors->any())
                 @foreach ($errors->all() as $error)
@@ -32,6 +32,8 @@
                 </div>
 
             </div>
+
+            <a href="{{route('download')}}" class="btn btn-primary mt-3">Download Image</a>
 
         </div>
 
