@@ -194,6 +194,10 @@ Route::get('/post-stats', [HomeController::class, 'PostStats']);
 
 Route::post('/upload-file', [ImageController::class, 'handleImage'])->name('upload-file');
 
+Route::get('/success', function(){
+    return '<h1>Successfully Uploaded</h1>';
+
+})->name('success');
 
 
 
