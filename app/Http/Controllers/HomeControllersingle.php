@@ -10,6 +10,9 @@ use App\Models\Address;
 use App\Models\Category;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Storage;
+use Symfony\Component\HttpFoundation\File\File;
+
 
 class HomeControllersingle extends Controller
 {
@@ -324,7 +327,12 @@ class HomeControllersingle extends Controller
      return view('home', compact('posts'));
      */
 
-     return view('home');
+    // return view('home');
+
+ Storage::delete('/images/image_1.jpg');
+   //File::delete(storage_path('/app/public/images/new_image.jpg'));
+// unlink(storage_path('/app/public/images/new_image.jpg'));
+
      
      
     }
