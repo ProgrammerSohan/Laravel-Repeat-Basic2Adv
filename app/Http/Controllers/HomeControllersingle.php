@@ -316,11 +316,15 @@ class HomeControllersingle extends Controller
 
      //return $post;
 
+     /*
      $posts = Post::with('tags')->get();
 
      $tag = Tag::first();
 
      return view('home', compact('posts'));
+     */
+
+     return view('home');
      
      
     }

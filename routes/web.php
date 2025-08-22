@@ -5,6 +5,7 @@ use App\Http\Controllers\BlogController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\HomeControllersingle;
+use App\Http\Controllers\ImageController;
 use App\Http\Controllers\loginController;
 use Illuminate\Support\Facades\Route;
 
@@ -191,7 +192,7 @@ Route::post('/login', [loginController::class, 'handleLogin'])->name('login.subm
 
 Route::get('/post-stats', [HomeController::class, 'PostStats']);
 
-
+Route::post('/upload-file', [ImageController::class, 'handleImage'])->name('upload-file');
 
 
 
