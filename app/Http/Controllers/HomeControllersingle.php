@@ -333,7 +333,13 @@ class HomeControllersingle extends Controller
    //File::delete(storage_path('/app/public/images/new_image.jpg'));
 // unlink(storage_path('/app/public/images/new_image.jpg'));
 
-     return view('home');
+    // return view('home');
+
+     $posts = Post::all();
+
+    // return response()->json($posts);
+    return response($posts);
+
      
     }
  
