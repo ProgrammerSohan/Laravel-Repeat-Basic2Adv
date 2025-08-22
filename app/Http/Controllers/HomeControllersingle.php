@@ -329,11 +329,11 @@ class HomeControllersingle extends Controller
 
     // return view('home');
 
- Storage::delete('/images/image_1.jpg');
+// Storage::delete('/images/image_1.jpg');
    //File::delete(storage_path('/app/public/images/new_image.jpg'));
 // unlink(storage_path('/app/public/images/new_image.jpg'));
 
-     
+     return view('home');
      
     }
  
